@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, DollarSign, Building2, Users, Wifi } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface InternshipCardProps {
   internship: Internship;
@@ -95,8 +96,9 @@ export const InternshipCard = ({ internship, matchScore, onApply }: InternshipCa
             variant={matchScore && matchScore >= 70 ? "hero" : "default"} 
             className="w-full"
             onClick={onApply}
+            asChild
           >
-            Apply Now
+            <Link to={`/apply?id=${internship.id}`}>Apply Now</Link>
           </Button>
         )}
       </CardContent>

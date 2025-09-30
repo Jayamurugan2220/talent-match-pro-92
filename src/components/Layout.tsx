@@ -82,13 +82,13 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
             <div className="flex gap-4">
               <Button variant="link" size="sm" asChild>
-                <a href="#">About</a>
+                <Link to="/about">About</Link>
               </Button>
               <Button variant="link" size="sm" asChild>
-                <a href="#">Guidelines</a>
+                <Link to="/guidelines">Guidelines</Link>
               </Button>
               <Button variant="link" size="sm" asChild>
-                <a href="#">Support</a>
+                <Link to="/support">Support</Link>
               </Button>
             </div>
           </div>
